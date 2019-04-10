@@ -47,10 +47,10 @@ namespace OneChatBotVK.Controllers
 
                         // Отправим в ответ полученный от пользователя текст
                         _vkApi.Messages.Send(new MessagesSendParams
-                        {
+                        {                             
                             RandomId = new DateTime().Millisecond,
                             PeerId = msg.PeerId.Value,
-                            Message = msg.Text
+                            Message = msg.Text,                                 
                         });
                         break;
                     }
